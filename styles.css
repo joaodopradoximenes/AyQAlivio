@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: serif !important; 
+}
+
+#top{
+    background-color: #f4890e;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+.logo{
+    float:left;
+    margin-left: 12%;
+    text-align: center;
+}
+.menu{
+    float: left;
+    width: 70%;
+    text-align: center;
+}
+.menu li{
+    display: inline-block;
+    list-style: none;
+    padding: 30px 20px 0px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #a05807;
+}
+.menu li > a{
+    text-decoration: none;
+    color: #562e00;
+
+}
+.menu li > a:hover {
+    border: solid;
+    border-color: #ffa741;
+    border-radius: 20px;
+    border-width: 10px;
+    background-color: #ffa741;
+}
+.middle-top{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 550;
+    background-image: url(imagens/background-copy.jpeg);
+    background-size: 100%; 
+    background-color: #ffa741;
+    background-repeat: no-repeat; 
+    background-position: relative; 
+    width: 100%; 
+    height: 10%;
+    padding-bottom: 15%;
+}
+    
+.container-tittles-top{
+    padding-top:  8.5%;
+}
+      
+.tittle-1{
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: #660295;
+    font-size: 50px;
+}
+.tittle-2{
+    margin-top: 0%;
+    padding-top: 0%;
+    color: #ffdfba;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+.tittle-3{
+    margin-top: 0%;
+    padding-top: 0%;
+    color: #075721;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.button-1{
+    border: none;
+    border-radius: 30px;
+    font-family: serif;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    width: 30%;
+    background-color: #075721;
+}
+.middle-center{
+    background-color: #fff5e9; 
+    min-height: 30%;
+    display: flex;
+    width: 100%;
+    height: 50vw;
+}
+.container-video {
+    margin-left: 5%;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    border-radius: 20px;
+}
+.container-text{
+    margin-left: 7%;
+    margin-top: 8.5%;
+    font-size: 25px;
+    font-weight: 600;
+    color: #6b481e;
+    margin-right: 1%; 
+}
+.video{
+    border-radius: 20px;
+}
+.text-align{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ccarousel-section{
+    width: 100%;
+}
