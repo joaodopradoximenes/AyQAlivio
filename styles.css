@@ -11,21 +11,27 @@ body{
     width: 100%;
     margin-bottom: 0;
 }
+.container{
+    background-color: #f4890e ;
+}
+
 .logo{
     float:left;
-    margin-left: 12%;
+    margin-left: 10%;
     text-align: center;
+
 }
 .menu{
     float: left;
-    width: 70%;
+    width: 80%;
     text-align: center;
+
 }
 .menu li{
     display: inline-block;
     list-style: none;
     padding: 30px 20px 0px;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 500;
     color: #a05807;
 }
@@ -51,8 +57,8 @@ body{
     background-repeat: no-repeat; 
     background-position: relative; 
     width: 100%; 
-    height: 10%;
-    padding-bottom: 15%;
+    height: 8%;
+    padding-bottom: 12%;
 }
     
 .container-tittles-top{
@@ -64,20 +70,20 @@ body{
     margin-top: 0;
     margin-bottom: 0px;
     color: #660295;
-    font-size: 50px;
+    font-size: 40px;
 }
 .tittle-2{
     margin-top: 0%;
     padding-top: 0%;
     color: #ffdfba;
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 0px;
 }
 .tittle-3{
     margin-top: 0%;
     padding-top: 0%;
     color: #075721;
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 50px;
 }
 
@@ -97,30 +103,159 @@ body{
     min-height: 30%;
     display: flex;
     width: 100%;
-    height: 50vw;
+    height: 60vw;
 }
 .container-video {
-    margin-left: 5%;
-    margin-top: 12%;
+    margin-left: 6%;
+    margin-top: 6vw;
+    padding-top: 7vw;
     margin-bottom: 10%;
     border-radius: 20px;
 }
 .container-text{
-    margin-left: 7%;
-    margin-top: 8.5%;
-    font-size: 25px;
-    font-weight: 600;
+    margin-left: 5vw;
+    margin-top: 12vw;
+    font-size: 18px;
+    font-weight: bold;
     color: #6b481e;
     margin-right: 1%; 
+}
+.text-align{
+    margin-bottom: 0;
 }
 .video{
     border-radius: 20px;
 }
-.text-align{
-    margin-top: 0;
+.middle-center-2{
+    display: flex;
+    background-color: #4d0b50;
+    width: 100%;
+    height: 55vw;
+}
+.forms{
+    margin-right: 2vw;
+    color: white;
+
+}
+.container-forms{
+    margin-top: 8.5%;
+    margin-left: 20%;
+}
+.input {
+    outline: none;
+    border-radius: 80px;
+    border-style: none;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.input-user{
+    outline: none;
+    border-radius: 80px;
+    border-style: none;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.button-2{
+    margin-top: 3%;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    font-family: serif;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 9%;
+    background-color:#fc8700;
+}
+.container-forms-text{
+    color: white;
+    margin-left: 10%;
+    margin-top: 6%;
+    font-size: 16px;
+}
+.paragraph-forms-text{
+    margin-bottom: 0;
+    font-weight: 1px;
+    font-size: 15px;
+    color: #c6b1c7;
+}
+.img-forms{
+    margin-bottom: 18%;
+}
+h1{
+    font-weight: bolder;
+}
+h2{
+    font-weight: bolder;
+    font-size: 40px;
+}
+.bottom-top{
+    display: flex;
+    background-color: #126c30;
+    color: white;
+    width: 100%;
+    height: 65vw;
+}
+.iframe-band-camp{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.text-band-camp{
+    margin-left: 15%;
+    margin-top: 16%;
+}
+.paragraph-band-camp{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: justify;
+}
+.bottom-medium{
+    display: flex;
+    width: 100%;
+    height: 50vw;
+    color:#562e00 ;
+    background-color:#ffffff;
+    align-items: center;
+    justify-content: center;
+}
+.text-donation{
+    margin-right: 20% ;
+}
+h3{
+    margin-bottom: 5%;
+    font-size: 50px;
+    font-weight: bold;
+}
+.donation-paragraph{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 20px;
+}
+.footer{
+    background-color: #fff5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    color: #572f01;
+}
+.support{
+    margin-right: 20%;
+}
+.support-paragraph{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+    
+}
+.support-paragraph-1{
     margin-bottom: 0;
 }
 
-.ccarousel-section{
-    width: 100%;
-}
