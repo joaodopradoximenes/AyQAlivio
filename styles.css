@@ -279,6 +279,9 @@ h3{
     font-size: 50px;
     font-weight: bold;
 }
+.text-donation h4{
+    font-weight: bold;
+}
 .donation-paragraph{
     margin-bottom: 0;
     padding-bottom: 0;
