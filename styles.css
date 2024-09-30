@@ -7,7 +7,6 @@ body{
 
 #top{
     position: fixed;
-    align-items: center;
     background-color: #f4890e;
     overflow: hidden;
     padding: 0;
@@ -16,6 +15,7 @@ body{
     z-index: 1;
 }
 .container{
+    justify-content: center;
     align-items: center;
     max-width: 100%;
     display: flex;
@@ -24,7 +24,6 @@ body{
 }
 
 .logo{
-    margin-left: 10%;
     text-align: center;
 
 }
@@ -135,6 +134,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(imagens/formsbackground.jpeg);
+    background-size: cover;
     background-color: #4d0b50;
     width: 100%;
     height: 60vw;
@@ -191,19 +192,18 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color:#fc8700;
 }
 .container-forms-text{
+    margin-top: 10%;
     color: white;
     padding-left: 3%;
     margin-top: 1%;
     font-size: 12px;
 }
 .paragraph-forms-text{
+
     margin-bottom: 0;
     font-weight: 1px;
     font-size: 15px;
     color: #c6b1c7;
-}
-.img-forms{
-    margin-bottom: 18%;
 }
 h1{
     font-weight: bolder;
@@ -220,6 +220,34 @@ h2{
     align-items: center;
     width: 100%;
     height: 65vw;
+}
+.bottom-top-2 {
+    background-color: #FFF5E9;
+}
+.text-ecommerce{
+    padding-top: 9%;
+    text-align: center;
+}
+.text-ecommerce h3{
+    font-size: 30px;
+    margin-bottom: 2%;
+    color: #562E00;
+}
+.text-ecommerce p {
+    margin-bottom: 0%;
+}
+.container-modals{
+    align-items: center;
+    margin-top: 5%;
+}
+.container-ecommerce-1{
+    display: flex;
+}
+.container-ecommerce-2{
+    display: flex;
+}
+.modal-group-1{
+    margin-right: 10%;
 }
 .iframe-band-camp{
     margin-left: 5%;
@@ -267,6 +295,9 @@ h3{
     margin-top: 10%;
     margin-left: 10%;
     margin-bottom: 10%;
+}
+.instagram-logo{
+    padding-bottom: 25px;
 }
 .footer{
     background-color: #fff5e9;
