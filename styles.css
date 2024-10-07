@@ -236,18 +236,111 @@ h2{
 .text-ecommerce p {
     margin-bottom: 0%;
 }
-.container-modals{
+.container-central-dialog{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.container-dialog {
+    display: grid;
+    grid-template-columns: repeat(2, 505px); 
+    grid-gap: 30px; 
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dialog-box {
+    width: 505px; 
+    height: 256px; 
+    background-color: #FFF5E9;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dialog::backdrop{
+    background-color: black;
+ 
+}
+dialog{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    height: 110%;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+
+}
+.dialog-img{
     margin-top: 5%;
 }
-.container-ecommerce-1{
-    display: flex;
-}
-.container-ecommerce-2{
-    display: flex;
-}
-.modal-group-1{
+.text-dialog{
+    background-color:#FFE7CB;
+    color: #562E00;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10%;
     margin-right: 10%;
+    border-radius: 10px;
+
+}
+.text-dialog h5{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.text-dialog p {
+    margin-bottom:0;
+    font-size: 15px;
+}
+.dialog-close{
+    margin-top: 2.5%;
+    border: none;
+    background-color: #a10202;
+    border-radius: 20px;
+    width: 150px;
+    padding: 8px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.dialog-button{
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.dialog-button-2{
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.dialog-button-3{
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.dialog-button-4{
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: bold;
+    
 }
 .iframe-band-camp{
     margin-left: 5%;
