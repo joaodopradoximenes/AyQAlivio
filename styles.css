@@ -34,7 +34,7 @@ body{
 .menu li{
     display: inline-block;
     list-style: none;
-    padding: 30px 20px 0px;
+    padding-top: 15px;
     gap: 10px;
     font-size: 15px;
     font-weight: 500;
@@ -43,13 +43,14 @@ body{
 .menu li > a{
     text-decoration: none;
     color: #562e00;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
 .menu li > a:hover {
-    border: solid;
     border-color: #ffa741;
     border-radius: 20px;
-    border-width: 10px;
     background-color: #ffa741;
 }
 .middle-top{
