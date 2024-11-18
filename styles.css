@@ -1,63 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 body{
-    margin: 0;
-    padding: 0;
-    font-family: Libre Baskerville, serif !important;
-    overflow-x: hidden;
+    margin: 0%;
+    padding: 0%;
+    font-family: Libre Baskerville, sans-serif !important;
 }
-
-#top{
+#header{
     position: fixed;
-    background-color: #f4890e;
+    width: 100vw;
     overflow: hidden;
-    padding: 0;
-    width: 100%;
-    margin-bottom: 0;
-    z-index: 1;
+    z-index: 1000;
 }
 .container{
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
+    background-color: #f4890e;
+    width: 100%;
     display: flex;
-    background-color: #f4890e ;
-    
+    justify-content: center;
+    height: 70px;
+    margin-bottom: 0px;
+    overflow: hidden;
 }
 
-.logo{
-    text-align: center;
-
-}
-.menu{
-    text-align: center;
-
-}
-.menu li{
-    display: inline-block;
+#menu{
+    display: flex;
+    margin-top: 1.3rem;
     list-style: none;
-    padding-top: 15px;
-    gap: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #a05807;
-}
-.menu li > a{
-    text-decoration: none;
-    color: #562e00;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
 
 }
-.menu li > a:hover {
-    border-color: #ffa741;
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+}
+#menu a:hover{
+    background-color:#ffa741;
+    border: none;
     border-radius: 20px;
-    background-color: #ffa741;
+}
+#button-mobile{
+    display: none;
 }
 .middle-top{
+    margin-top: 0px;
     text-align: center;
     font-size: 40px;
     font-weight: 550;
-    background-image: url(imagens/background-copy.jpeg);
+    background-image: url(images/background-copy.jpeg);
     background-size: cover; 
     background-color: #ffa741;
     background-repeat: no-repeat; 
@@ -103,14 +92,13 @@ body{
     padding: 10px;
     width: 30%;
     background-color: #075721;
+    font-family: Libre Baskerville, sans-serif !important;
 }
 .middle-center{
     background-color: #fff5e9; 
-    min-height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 60vw;
 
 }
@@ -122,11 +110,11 @@ body{
     font-size: 18px;
     font-weight: bold;
     color: #6b481e;
-    padding-left: 5vw;
-    padding-right: 2vw;
+    padding-left: 3vw;
 }
 .text-align{
-    margin-bottom: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .video{
     border-radius: 20px;
@@ -154,25 +142,29 @@ body{
 }
 .input {
     outline: none;
-    padding: 20px;
+    padding-left: 30px;
     border-radius: 80px;
     border-style: none;
     height: 50px;
     width: 100%;
     margin-bottom: 30px;
+    font-family: Libre Baskerville, sans-serif;;
+
 }
 ::placeholder{
     color: #23506d;
+    font-family: Libre Baskerville, sans-serif;
 }
 
 .input-user{
     outline: none;
-    padding: 20px;
+    padding: 0px;
     border-radius: 80px;
     border-style: none;
     height: 50px;
     width: 100%;
     margin-bottom: 10px;
+    padding-left: 30px;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -187,10 +179,14 @@ input[type="number"]::-webkit-outer-spin-button {
     font-family: serif;
     color: white;
     text-decoration: none;
-    width: 100%;
+    width: 105%;
     height: 9%;
     padding: 15px;
     background-color:#fc8700;
+    font-size: 20px;
+    align-items: center;
+    font-family: Libre Baskerville, sans-serif !important;
+    
 }
 .container-forms-text{
     margin-top: 10%;
@@ -201,13 +197,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .paragraph-forms-text{
 
-    margin-bottom: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     font-weight: 1px;
     font-size: 15px;
     color: #c6b1c7;
 }
 h1{
     font-weight: bolder;
+    font-size: 40px;
 }
 h2{
     font-weight: bolder;
@@ -221,6 +219,19 @@ h2{
     align-items: center;
     width: 100%;
     height: 65vw;
+}
+.iframe-band-camp{
+    margin-left: 5%;
+    margin-top: 8%;
+}
+.text-band-camp{
+    margin-left: 10%;
+    margin-top: 12%;
+}
+.paragraph-band-camp{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: justify;
 }
 .bottom-top-2 {
     background-color: #FFF5E9;
@@ -310,6 +321,7 @@ dialog{
     padding: 8px;
     color: #FFFFFF;
     font-weight: bold;
+    font-family: Libre Baskerville, sans-serif !important;
 }
 .dialog-button{
     border: none;
@@ -317,6 +329,7 @@ dialog{
     color: #FFFFFF;
     font-size: 30px;
     font-weight: bold;
+    font-family: Libre Baskerville, sans-serif !important;
 
 }
 .dialog-button-2{
@@ -325,6 +338,7 @@ dialog{
     color: #FFFFFF;
     font-size: 30px;
     font-weight: bold;
+    font-family: Libre Baskerville, sans-serif !important;
     
 }
 .dialog-button-3{
@@ -333,6 +347,7 @@ dialog{
     color: #FFFFFF;
     font-size: 30px;
     font-weight: bold;
+    font-family: Libre Baskerville, sans-serif !important;
     
 }
 .dialog-button-4{
@@ -341,20 +356,8 @@ dialog{
     color: #FFFFFF;
     font-size: 30px;
     font-weight: bold;
+    font-family: Libre Baskerville, sans-serif !important;
     
-}
-.iframe-band-camp{
-    margin-left: 5%;
-    margin-top: 8%;
-}
-.text-band-camp{
-    margin-left: 10%;
-    margin-top: 12%;
-}
-.paragraph-band-camp{
-    margin-bottom: 0;
-    padding-bottom: 0;
-    text-align: justify;
 }
 .bottom-medium{
     display: flex;
@@ -378,11 +381,10 @@ h3{
     font-size: 30px;
 }
 .donation-paragraph{
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     font-size: 20px;
 }
-
 .bottom-final{
     background-color: #FF961D;
     align-items: center;
@@ -397,6 +399,7 @@ h3{
 .instagram-logo{
     padding-bottom: 25px;
 }
+
 .footer{
     background-color: #fff5e9;
     padding-top: 5%;
@@ -442,4 +445,246 @@ h3{
     padding-right: 30px;
     padding-bottom: 60px;
     
+}
+@media (max-width: 1037px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        background-color: #f4890e;
+    }
+    #button-mobile{
+        display:block;
+        margin-top: 1.2rem;
+        margin-right: 10px;
+    }
+    #menu{
+        display:block;
+        margin-top: 0%;
+        font-size: 30px;
+        position: fixed;
+        width: 40vw;
+        top: 69px;
+        right: 0px;
+        height: 0px;
+        transition: 0.4s;
+        background-color: #f7bb66;
+        opacity: 0.92;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #menu li{
+        padding: 25px 0px;
+
+    }
+    #menu a {
+        font-size: 20px;
+        color: #140214;
+    }
+    #menu a:hover{
+        background-color: #750779;
+        color: #d23bd2;
+    }
+    #nav.active #menu{
+        height: calc( 100vh - 69px);
+        visibility: visible;
+        overflow-y: auto;
+        z-index: 1000;
+        margin-left: 0;
+        position: fixed;
+
+    }
+    #button-mobile{
+        background: none;
+        border: none;
+    }
+    .middle-top{
+        margin-top: 0;
+        background-image: url(images/Mobile.svg);
+    
+    }
+    .container-tittles-top{
+        padding-top:  30vh;
+        padding-bottom: 50vh;
+    }
+    .tittle-1{
+        padding-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #660295;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .tittle-2{
+        margin-top: 0%;
+        padding-top: 0%;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #ffdfba;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .tittle-3{
+        margin-top: 0%;
+        padding-top: 0%;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #075721;
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+    
+    .button-1{
+        border: none;
+        border-radius: 30px;
+        font-family: serif;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px;
+        width: 80%;
+        background-color: #075721;
+        
+    }
+    .middle-center{
+        background-color: #fff5e9; 
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 150vh;
+        
+    
+    }
+    .container-video{
+        padding-top: 20%;
+        margin-left: 15px;
+        margin-right: 20px;
+        padding-bottom: 20%;
+    }
+    .video{
+
+        width: 320px;
+        height: 250px;
+        border-radius: 25px;
+        background: #140214;
+
+    }
+    .container-text{
+        font-size: 15px;
+        font-weight: bold;
+        color: #6b481e;
+        margin-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+    .text-align{
+        margin: 0px;
+        padding: 0px;
+    }
+    .middle-center-2{
+        display: block;
+        height: 160vh;
+    }
+    .container-forms-text{
+        padding-top: 20px;
+        margin-top: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .container-forms{
+        padding-top: 6%;
+        margin-left: 23px;
+        align-items: center;
+    }
+    .input{
+        width: 80%;
+        position: relative;
+    }
+    .input-user{
+        width: 80%;
+        position: relative;
+    }
+    .button-2{
+        width: 85%;
+        position: relative;
+    }
+    .bottom-top{
+        display: block;
+        margin-top: 0%;
+        padding-top: 0%;
+        height: 190vh;
+
+    }
+    .iframe-band-camp{
+        margin-top: 0px;
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+    .text-ecommerce{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .container-central-dialog{
+        margin-left: 40px;
+    }
+    .container-dialog{
+        display: block;
+    }
+    .dialog-box {
+        width: 300px; 
+        height: 200px; 
+        margin-bottom: 20px ;
+    }
+    .dialog-img{
+        display: none;
+
+    }
+    dialog{
+        height: 450px;
+    }
+    .text-dialog{
+        width: 220px;
+        height: 360px;
+        margin-left: 0;
+    }
+    .bottom-medium{
+        display: block;
+        height: 130vh;
+    }
+    .text-donation h4{
+       padding-left: 40px ;
+    }
+    .donation-paragraph{
+        font-size: 15px;
+        margin-left: 50px ;
+    }
+    .pix-qr{
+        margin-top: 60px;
+        padding-left: 20px;
+    }
+    .instagram-container{
+        margin-left: 20px;
+        width: 150px;
+    }
+    .footer{
+        display: block;
+    }
+    .container-support{
+        display: block;
+    }
+    .container-support-credits{
+        display: block;
+    }
+    .support-info{
+        margin-right: 10px;
+    }
+    .support-paragraph-1 {
+        margin: 0px;
+        padding: 0px;
+    }
+    .support-images{
+        margin-left: 30px;
+    }
 }
