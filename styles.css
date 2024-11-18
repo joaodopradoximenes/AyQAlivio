@@ -471,7 +471,7 @@ h3{
         right: 0px;
         height: 0px;
         transition: 0.4s;
-        background-color: #f7bb66;
+        background-color: #660295;
         opacity: 0.92;
         visibility: hidden;
         overflow-y: hidden;
@@ -485,8 +485,8 @@ h3{
         color: #140214;
     }
     #menu a:hover{
-        background-color: #750779;
-        color: #d23bd2;
+        background-color: #300432;
+        color: #fbeffb;
     }
     #nav.active #menu{
         height: calc( 100vh - 69px);
