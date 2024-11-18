@@ -5,25 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ay que alivio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles.css" !important>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <header id="top">
+    <header id="header">
         <div class="container">
-            <div class="logo">
-                <img src="imagens/Logotipo2023_SEMFUNDO 1.svg" >
-            </div>
-            <nav class="menu">
-                <ul>
+            <img class="img-logo" src="images/Logotipo2023_SEMFUNDO 1.svg" >
+            <nav id="nav">
+                <button id="button-mobile"><img src="images/menu.svg" width="30px"></button>
+                <ul id="menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#abortaria">Abortaria</a></li>
-                    <li><a href="#ultrassom">Ultra Sons</a></li>
+                    <li><a href="#ultrassom">UltraSons</a></li>
                     <li><a href="#abortices">Abortices</a></li>
                     <li><a href="#apoio">Apoio</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -66,268 +61,330 @@
             <p class="text-align"> e da reverência inegociável ao direito de decidir.</p>
         </div>
     </section>
-    <section class="carousel-section">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="imagens/IMG1.jpeg" class="d-block w-100" alt="img1" width="90vw">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/IMG2.jpeg" class="d-block w-100" alt="img1" width="90vw">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/IMG3.jpeg" class="d-block w-100" alt="img1" width="90vw">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/IMG4.jpeg" class="d-block w-100" alt="img1" width="90vw">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/IMG5.jpeg" class="d-block w-100" alt="img1" width="90vw">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/IMG6.jpeg" class="d-block w-100" alt="img1" width="90vw">
-              </div>
+    <script src="script.js"></script>
+    <section class="carrousel-imgs">
+        <style>
+                .carousel-container {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+
+                }
+                .carousel-images {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                }
+        
+                .carousel-images img {
+                    width: 100%;
+                    flex-shrink: 0;
+                }
+                .indicators {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: none;
+                    gap: 5px;
+                }
+        
+                .indicator {
+                    width: 10px;
+                    height: 10px;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+        
+                .indicator.active {
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            </style>
+        
+        
+            <div class="carousel-container">
+                <div class="carousel-images">
+                    <img src="images/IMG1.jpeg" alt="Slide 1">
+                    <img src="images/IMG2.jpeg" alt="Slide 2">
+                    <img src="images/IMG3.jpeg" alt="Slide 3">
+                    <img src="images/IMG4.jpeg" alt="Slide 4">
+                    <img src="images/IMG5.jpeg" alt="Slide 5">
+                    <img src="images/IMG6.jpeg" alt="Slide 5">
+                </div>
+                <div class="indicators">
+                    <div class="indicator active" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <div class="indicator" data-index="2"></div>
+                    <div class="indicator" data-index="3"></div>
+                    <div class="indicator" data-index="4"></div>
+                    <div class="indicator" data-index="5"></div>
+                </div>
             </div>
-          </div>
+        
+            <script>
+                const imagesContainer = document.querySelector('.carousel-images');
+                const indicators = document.querySelectorAll('.indicator');
+                let currentIndex = 0;
+                const slideCount = indicators.length;
+        
+                function moveCarousel(index) {
+                    imagesContainer.style.transform = `translateX(-${index * 100}%)`;
+                    indicators.forEach(indicator => indicator.classList.remove('active'));
+                    indicators[index].classList.add('active');
+                }
+        
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slideCount;
+                    moveCarousel(currentIndex);
+                }, 3000);
+        
+                indicators.forEach(indicator => {
+                    indicator.addEventListener('click', (e) => {
+                        currentIndex = parseInt(e.target.getAttribute('data-index'));
+                        moveCarousel(currentIndex);
+                    });
+                });
+            </script>
     </section>
     <section id="abortaria" class="middle-center-2">
-      <div class="container-forms-text">
-        <h1>Seja da abortaria<br>você também!</h1><br>
-        <p class="paragraph-forms-text">Quer fazer parte da bateria mais amorosa e</p>
-        <p class="paragraph-forms-text">aliviada do Brasil? Oferecemos oficinas</p>
-        <p class="paragraph-forms-text">gratuitas de percussão, uma vez por semana,</p>
-        <p class="paragraph-forms-text">na cidade de São Paulo.</p>
-        <p class="paragraph-forms-text">Preencha este formulário e receba</p>
-        <p class="paragraph-forms-text">informações de quando abriremos inscrições!</p>
-    </div>
-        <div class="container-forms">
-            <forms class="forms">
-                <div>
-                    <label for="nome">Como devemos te chamar?</label><br>
-                    <input class="input" type="text" id="nome" placeholder="Digite o seu nome"/>
-                  </div>
-                  <div>
-                    <label for="number">Qual o seu Whatsapp?</label><br>
-                    <input class="input" type="number" id="number" placeholder="Digite o seu número" />
-                  </div>
-                  <div>
-                    <label for="email">Qual seu e-mail?</label><br>
-                    <input class="input" type="email" id="email" placeholder="Digite o seu e-mail" />
-                  </div>
-                  <div>
-                    <label for="user">Qual seu perfil do Instragam?</label><br>
-                    <input class="input-user" type="text" id="user" placeholder="Digite o seu usuário">
-                    <small class="paragraph-forms-text">(Obs: você precisa se tornar seguidora(e) do nosso perfil).</small>
-                  </div>
-                  <button class="button-2">Enviar Informações</button>
-            </form>
-        </div>
-    </section>
-    <section id="ultrassom" class="bottom-top">
-        <div class="iframe-band-camp">
-          <iframe style="border: 0; width: 400px; height: 600px;border: solid; border-color:#184c29; border-radius: 20px;" src="https://bandcamp.com/EmbeddedPlayer/album=2622521818/size=large/bgcol=ffffff/linkcol=e99708/transparent=true/" seamless><a href="https://ayquealivio.bandcamp.com/album/ay-que-al-vio">Ay Que Alívio! de Ay Que Alívio!</a></iframe>
-        </div>
-        <div class="text-band-camp">
-          <h2>
-            Seu alivio é político e <br>
-            deve ser cantado em <br>
-            voz alta e junte <br>
-            cazamiga!
-          </h2><br><br>
-          <P class="paragraph-band-camp"> O álbum Ay Que Alívio! está disponível</p>
-          <p class="paragraph-band-camp">na plataforma de stream musical</p>
-          <P class="paragraph-band-camp">colaborativa BandCamp!</P>
-          <br><p class="paragraph-band-camp">ouça gratuitamente!</P>
-          <img src="imagens/image 15.svg" style="margin-top: 50px;">
-        </div>
-    </section>
-    <section id="abortices" class="bottom-top-2">
-        <div class="text-ecommerce">
-          <h3>Abortices</h3>
-          <p>Abortices é a nossa lojinha virtual onde você colabora com a difusão científica e popularização</p><p>de um que salva vidas, ao mesmo que adquire produtos de qualidade e cheios de carinho e </p><p>humor!</p><br><p>A renda obtida com a venda dos produtos deve cobrir as despesas de produção de nossas</p><p>intervenções políticas e festeiras.</p>
-        </div>
-        <div class="container-central-dialog">
-          <div class="container-dialog">
-            <div class="dialog-box" style="background-image: url(imagens/dolar.png); background-repeat: no-repeat; background-size: cover;">
-              <button  class="dialog-button">Do Lar!</button>
-              <dialog>
-                  <div class="dialog-img">
-                    <img src="imagens/fundo.png" alt="fundo" height="140px" width="540px">
-                  </div>
-                  <div class="text-dialog">
-                    <h5>Em Construção!</h5>
-                    <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
-                  </div>
-                  <button class="dialog-close">Fechar</button>
-              </dialog>
-            </div>
-            <div class="dialog-box" style="background-image: url(imagens/recatadas.png); background-repeat: no-repeat; background-size: cover;">
-              <button  class="dialog-button-2">Recatadas</button>
-              <dialog>
-                  <div class="dialog-img">
-                    <img src="imagens/fundo.png" alt="fundo" height="140px" width="540px">
-                  </div>
-                  <div class="text-dialog">
-                    <h5>Em Construção!</h5>
-                    <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
-                  </div>
-                  <button class="dialog-close-2">Fechar</button>
-              </dialog>
-            </div>
-            <div class="dialog-box" style="background-image: url(imagens/belas.png); background-repeat: no-repeat; background-size: cover;">
-              <button  class="dialog-button-3">Belas</button>
-              <dialog>
-                  <div class="dialog-img">
-                    <img src="imagens/fundo.png" alt="fundo" height="140px" width="540px">
-                  </div>
-                  <div class="text-dialog">
-                    <h5>Em Construção!</h5>
-                    <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
-                  </div>
-                  <button class="dialog-close">Fechar</button>
-              </dialog>
-            </div>
-            <div class="dialog-box" style="background-image: url(imagens/aliviantes.png); background-repeat: no-repeat; background-size: cover;">
-              <button  class="dialog-button-4">Aliviantes</button>
-              <dialog>
-                  <div class="dialog-img">
-                    <img src="imagens/fundo.png" alt="fundo" height="140px" width="540px">
-                  </div>
-                  <div class="text-dialog">
-                    <h5>Em Construção!</h5>
-                    <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
-                  </div>
-                  <button class="dialog-close">Fechar</button>
-              </dialog>
-            </div>
+            <div class="container-forms-text">
+              <h1>Seja da abortaria<br>você também!</h1><br>
+              <p class="paragraph-forms-text">Quer fazer parte da bateria mais amorosa e</p>
+              <p class="paragraph-forms-text">aliviada do Brasil? Oferecemos oficinas</p>
+              <p class="paragraph-forms-text">gratuitas de percussão, uma vez por semana,</p>
+              <p class="paragraph-forms-text">na cidade de São Paulo.</p>
+              <p class="paragraph-forms-text">Preencha este formulário e receba</p>
+              <p class="paragraph-forms-text">informações de quando abriremos inscrições!</p>
           </div>
-        </div>
-        <script>
-          const button = document.querySelector(".dialog-button");
-          const button2 = document.querySelector(".dialog-button-2");
-          const button3 = document.querySelector(".dialog-button-3");
-          const button4 = document.querySelector(".dialog-button-4");
-          const modal = document.querySelector("dialog");
-          const closeButton = document.querySelector(".dialog-close");
-          
-  
-          
-          button.onclick = function () {
-              modal.showModal();
-          };
-          button2.onclick = function () {
-            modal.showModal();
-          };
-          button3.onclick = function () {
-            modal.showModal();
-          };
-          button4.onclick = function () {
-            modal.showModal();
-          };
-  
-
-          closeButton.onclick = function () {
-              modal.close();
-          };
-      </script>
-    </section>
-    <section id="apoio" class="bottom-medium">
-      <div class="text-donation">
-        <h4>Para colocar os<br>alívios nas ruas!</h4><br>
-        <p class="donation-paragraph">Se já comprou todos os itens de</p>
-        <p class="donation-paragraph">nossa lojinha e quer colaborar</p>
-        <p class="donation-paragraph">com mais, para que a festa do</p>
-        <p class="donation-paragraph">Alívio chegue em mais lugares,</p>
-        <p class="donation-paragraph">você também pode doar a</p>
-        <p class="donation-paragraph">quantia que quiser para a gente!</p>
-      </div>
-      <div>
-        <img src="imagens/image 18.svg">
-      </div>
-    </section>
-    <section class="bottom-final">
-      <div class="instagram-container">
-        <div class="instagram-logo">
-          <img src="imagens/Group.svg" width="60px" height="60px">
-       </div>
-       <div>
-         <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C7__aQRuwOK/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-           <div style="padding:16px;">
-              <a href="https://www.instagram.com/p/C7__aQRuwOK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                 <div style=" display: flex; flex-direction: row; align-items: center;">
-                    <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
-                    <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                       <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-                       <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
-                    </div>
-                 </div>
-                 <div style="padding: 19% 0;"></div>
-                 <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
-                    <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                             <g>
-                                <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+              <div class="container-forms">
+                  <form class="forms">
+                      <div>
+                          <label for="nome">Como devemos te chamar?</label><br>
+                          <input class="input" type="text" id="nome" placeholder="Digite o seu nome"/>
+                        </div>
+                        <div>
+                          <label for="number">Qual o seu Whatsapp?</label><br>
+                          <input class="input" type="number" id="number" placeholder="Digite o seu número" />
+                        </div>
+                        <div>
+                          <label for="email">Qual seu e-mail?</label><br>
+                          <input class="input" type="email" id="email" placeholder="Digite o seu e-mail" />
+                        </div>
+                        <div>
+                          <label for="user">Qual seu perfil do Instragam?</label><br>
+                          <input class="input-user" type="text" id="user" placeholder="Digite o seu usuário"><br>
+                          <small class="paragraph-forms-text">(Obs: você precisa se tornar seguidora(e) do nosso perfil).</small>
+                        </div>
+                        <button class="button-2">Enviar Informações</button>
+                  </form>
+              </div>
+        </section>
+        <section id="ultrassom" class="bottom-top">
+            <div class="iframe-band-camp">
+              <iframe style="border: 0; width: 300px; height: 500px;border: solid; border-color:#184c29; border-radius: 20px;" src="https://bandcamp.com/EmbeddedPlayer/album=2622521818/size=large/bgcol=ffffff/linkcol=e99708/transparent=true/" seamless><a href="https://ayquealivio.bandcamp.com/album/ay-que-al-vio">Ay Que Alívio! de Ay Que Alívio!</a></iframe>
+            </div>
+            <div class="text-band-camp">
+              <h2>
+                Seu alivio é político e <br>
+                deve ser cantado em <br>
+                voz alta e junte <br>
+                cazamiga!
+              </h2><br><br>
+              <P class="paragraph-band-camp"> O álbum Ay Que Alívio! está disponível</p>
+              <p class="paragraph-band-camp">na plataforma de stream musical</p>
+              <P class="paragraph-band-camp">colaborativa BandCamp!</P>
+              <br><p class="paragraph-band-camp">ouça gratuitamente!</P>
+              <img src="images/BADCAMP.svg" style="margin-top: 50px;">
+            </div>
+        </section>
+        <section id="abortices" class="bottom-top-2">
+            <div class="text-ecommerce">
+              <h3>Abortices</h3>
+              <p>Abortices é a nossa lojinha virtual onde você colabora com a difusão científica e popularização</p><p>de um conhecimento que salva vidas, ao mesmo que adquire produtos de qualidade e cheios de carinho e </p><p>humor!</p><br><p>A renda obtida com a venda dos produtos deve cobrir as despesas de produção de nossas</p><p>intervenções políticas e festeiras.</p>
+            </div>
+            <div class="container-central-dialog">
+              <div class="container-dialog">
+                <div class="dialog-box" style="background-image: url(images/dolar.png); background-repeat: no-repeat; background-size: cover;">
+                  <button  class="dialog-button">Do Lar!</button>
+                  <dialog>
+                      <div class="dialog-img">
+                        <img src="images/fundo.png" alt="fundo" height="140px" width="540px">
+                      </div>
+                      <div class="text-dialog">
+                        <h5>Em Construção!</h5>
+                        <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
+                      </div>
+                      <button class="dialog-close">Fechar</button>
+                  </dialog>
+                </div>
+                <div class="dialog-box" style="background-image: url(images/recatadas.png); background-repeat: no-repeat; background-size: cover;">
+                  <button  class="dialog-button-2">Recatadas</button>
+                  <dialog>
+                      <div class="dialog-img">
+                        <img src="images/fundo.png" alt="fundo" height="140px" width="540px">
+                      </div>
+                      <div class="text-dialog">
+                        <h5>Em Construção!</h5>
+                        <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
+                      </div>
+                      <button class="dialog-close-2">Fechar</button>
+                  </dialog>
+                </div>
+                <div class="dialog-box" style="background-image: url(images/belas.png); background-repeat: no-repeat; background-size: cover;">
+                  <button  class="dialog-button-3">Belas</button>
+                  <dialog>
+                      <div class="dialog-img">
+                        <img src="images/fundo.png" alt="fundo" height="140px" width="540px">
+                      </div>
+                      <div class="text-dialog">
+                        <h5>Em Construção!</h5>
+                        <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
+                      </div>
+                      <button class="dialog-close">Fechar</button>
+                  </dialog>
+                </div>
+                <div class="dialog-box" style="background-image: url(images/aliviantes.png); background-repeat: no-repeat; background-size: cover;">
+                  <button  class="dialog-button-4">Aliviantes</button>
+                  <dialog>
+                      <div class="dialog-img">
+                        <img src="images/fundo.png" alt="fundo" height="140px" width="540px">
+                      </div>
+                      <div class="text-dialog">
+                        <h5>Em Construção!</h5>
+                        <p>Estamos construindo algo especial para você! Nossa loja</br>online está quase pronta e será lançada em breve. Fique<br>de olho nas novidades e prepare-se para descobrir<br>produtos incríveis. Nos vemos em breve!</p>
+                      </div>
+                      <button class="dialog-close">Fechar</button>
+                  </dialog>
+                </div>
+              </div>
+            </div>
+            <script>
+              const button = document.querySelector(".dialog-button");
+              const button2 = document.querySelector(".dialog-button-2");
+              const button3 = document.querySelector(".dialog-button-3");
+              const button4 = document.querySelector(".dialog-button-4");
+              const modal = document.querySelector("dialog");
+              const closeButton = document.querySelector(".dialog-close");
+              
+      
+              
+              button.onclick = function () {
+                modal.showModal();
+              };
+              button2.onclick = function () {
+                modal.showModal();
+              };
+              button3.onclick = function () {
+                modal.showModal();
+              };
+              button4.onclick = function () {
+                modal.showModal();
+              };
+      
+    
+              closeButton.onclick = function () {
+                  modal.close();
+              };
+          </script>
+        </section>
+        <section id="apoio" class="bottom-medium">
+            <div class="text-donation">
+              <h4>Para colocar os<br>alívios nas ruas!</h4><br>
+              <p class="donation-paragraph">Se já comprou todos os itens de</p>
+              <p class="donation-paragraph">nossa lojinha e quer colaborar</p>
+              <p class="donation-paragraph">com mais, para que a festa do</p>
+              <p class="donation-paragraph">Alívio chegue em mais lugares,</p>
+              <p class="donation-paragraph">você também pode doar a</p>
+              <p class="donation-paragraph">quantia que quiser para a gente!</p>
+            </div>
+            <div class="pix-qr">
+              <img src="images/image 18.svg">
+            </div>
+        </section>
+        <section class="bottom-final">
+            <div class="instagram-container">
+              <div class="instagram-logo">
+                <img src="images/Group.svg" width="60px" height="60px">
+             </div>
+             <div>
+               <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C7__aQRuwOK/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                 <div style="padding:16px;">
+                    <a href="https://www.instagram.com/p/C7__aQRuwOK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                       <div style=" display: flex; flex-direction: row; align-items: center;">
+                          <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                          <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                             <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                             <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                          </div>
+                       </div>
+                       <div style="padding: 19% 0;"></div>
+                       <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                          <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                   <g>
+                                      <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                                   </g>
+                                </g>
                              </g>
-                          </g>
-                       </g>
-                    </svg>
+                          </svg>
+                       </div>
+                       <div style="padding-top: 8px;">
+                          <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div>
+                       </div>
+                       <div style="padding: 12.5% 0;"></div>
+                       <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                          <div>
+                             <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div>
+                             <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div>
+                             <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
+                          </div>
+                          <div style="margin-left: 8px;">
+                             <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div>
+                             <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
+                          </div>
+                          <div style="margin-left: auto;">
+                             <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div>
+                             <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div>
+                             <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
+                          </div>
+                       </div>
+                       <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                          <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div>
+                          <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
+                       </div>
+                    </a>
+                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C7__aQRuwOK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Frente SP Pela Legalização do Aborto (@frenteasp)</a></p>
                  </div>
-                 <div style="padding-top: 8px;">
-                    <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div>
-                 </div>
-                 <div style="padding: 12.5% 0;"></div>
-                 <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
-                    <div>
-                       <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div>
-                       <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div>
-                       <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
-                    </div>
-                    <div style="margin-left: 8px;">
-                       <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div>
-                       <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
-                    </div>
-                    <div style="margin-left: auto;">
-                       <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div>
-                       <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div>
-                       <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
-                    </div>
-                 </div>
-                 <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
-                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div>
-                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
-                 </div>
-              </a>
-              <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C7__aQRuwOK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Frente SP Pela Legalização do Aborto (@frenteasp)</a></p>
-           </div>
-        </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
-       </div>
-      </div>
-    </section>
-    <footer id="contato"  class="footer">
-      <div class="container-support">
-        <div class="support">
-          <p class="support-paragraph">Apoio:</p>
-          <img src="imagens/inroads logo with full name_BLUE for light background 1.svg">
-        </div>
-        <div class="support-info">
-          <p class="support-paragraph-1">Quer alegrar seu encontro feminista, seu congresso </p>
-          <p class="support-paragraph-1"> sobre direitos sexuais e reprodutivos, seus seminários</p>
-          <p class="support-paragraph-1">sobre gênero e sexualidade e ainda combater os</p>
-          <p class="support-paragraph-1">contra o aborto? Chame a gente!</p><br>
-          <p class="support-paragraph-1"><img src="imagens/EnvelopeSimple.svg">contato@ayquealivio.com</p>
-        </div>
-      </div>
-      <div class="container-support-credits">
-          <div class="support-credits">
-            <p>@Ayquealivio. Todos os direitos reservados</p>
-          </div>
-          <div class="support-images">
-            <a href="https://ayquealivio.bandcamp.com/album/ay-que-al-vio"><img src="imagens/image 15.svg" alt="bandcamp logo" width="40px" height="40px"></a>
-            <a href=""><img src="imagens/Group.svg" alt="insta logo" width="40px" height="40px"></a>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+              </blockquote>
+              <script async src="//www.instagram.com/embed.js"></script>
+             </div>
+            </div>
+          </section>
+          <footer id="contato"  class="footer">
+            <div class="container-support">
+              <div class="support">
+                <p class="support-paragraph">Apoio:</p>
+                <img src="images/inroads logo with full name_BLUE for light background 1.svg">
+              </div>
+              <div class="support-info">
+                <p class="support-paragraph-1">Quer alegrar seu encontro feminista, seu congresso </p>
+                <p class="support-paragraph-1"> sobre direitos sexuais e reprodutivos, seus seminários</p>
+                <p class="support-paragraph-1">sobre gênero e sexualidade e ainda combater os</p>
+                <p class="support-paragraph-1">contra o aborto? Chame a gente!</p><br>
+                <p class="support-paragraph-1"><img src="images/EnvelopeSimple.svg">contato@ayquealivio.com</p>
+              </div>
+            </div>
+            <div class="container-support-credits">
+                <div class="support-credits">
+                  <p>@Ayquealivio. Todos os direitos reservados</p>
+                </div>
+                <div class="support-images">
+                  <a href="https://ayquealivio.bandcamp.com/album/ay-que-al-vio"><img src="images/BADCAMP.svg" alt="bandcamp logo" width="40px" height="40px"></a>
+                  <a href=""><img src="images/Group.svg" alt="insta logo" width="40px" height="40px"></a>
+            </div>
+          </footer>
 </body>
 </html>
