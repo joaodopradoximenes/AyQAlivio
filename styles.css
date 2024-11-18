@@ -3,6 +3,7 @@ body{
     margin: 0%;
     padding: 0%;
     font-family: Libre Baskerville, sans-serif !important;
+    overflow: hidden;
 }
 #header{
     position: fixed;
@@ -447,6 +448,9 @@ h3{
     
 }
 @media (max-width: 1037px){
+    .body{
+        overflow: hidden;
+    }
     .container{
         display: flex;
         justify-content: space-between;
