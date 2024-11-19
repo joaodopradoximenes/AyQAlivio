@@ -447,7 +447,7 @@ h3{
     padding-bottom: 60px;
     
 }
-@media (max-width: 1037px){
+@media (max-width: 1000px){
     .body{
         overflow-x: hidden;
     }
